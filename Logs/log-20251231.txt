@@ -1,0 +1,33 @@
+2025-12-31 00:39:58.403 -04:00 [INF] Executing Migrate...
+2025-12-31 00:39:58.460 -04:00 [INF] Evolve initialized.
+2025-12-31 00:39:58.769 -04:00 [INF] Metadata validated.
+2025-12-31 00:39:58.781 -04:00 [INF] Database is up to date. No migration needed.
+2025-12-31 00:39:59.497 -04:00 [INF] Now listening on: https://localhost:7286
+2025-12-31 00:39:59.504 -04:00 [INF] Now listening on: http://localhost:5120
+2025-12-31 00:39:59.565 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-31 00:39:59.568 -04:00 [INF] Hosting environment: Development
+2025-12-31 00:39:59.572 -04:00 [INF] Content root path: D:\2025-udemy\erudio\git\RestWithAspNet10-Scaffold
+2025-12-31 00:40:13.097 -04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7286/api/book - null null
+2025-12-31 00:40:13.155 -04:00 [INF] Executing endpoint 'RestWithAspNet10_Scaffold.Controllers.BookController.Get (RestWithAspNet10-Scaffold)'
+2025-12-31 00:40:13.187 -04:00 [INF] Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller RestWithAspNet10_Scaffold.Controllers.BookController (RestWithAspNet10-Scaffold).
+2025-12-31 00:40:13.559 -04:00 [INF] Fetching all books
+2025-12-31 00:40:13.987 -04:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-31 00:40:14.344 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[id], [b].[author], [b].[launch_date], [b].[price], [b].[title]
+FROM [Books] AS [b]
+2025-12-31 00:40:14.418 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RestWithAspNet10_Scaffold.DTOs.Book.BookResponseDTO, RestWithAspNet10-Scaffold, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-31 00:40:14.452 -04:00 [INF] Executed action RestWithAspNet10_Scaffold.Controllers.BookController.Get (RestWithAspNet10-Scaffold) in 1255.9977ms
+2025-12-31 00:40:14.459 -04:00 [INF] Executed endpoint 'RestWithAspNet10_Scaffold.Controllers.BookController.Get (RestWithAspNet10-Scaffold)'
+2025-12-31 00:40:14.472 -04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7286/api/book - 200 null application/json; charset=utf-8 1382.5398ms
+2025-12-31 00:40:21.662 -04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7286/api/book/19 - null null
+2025-12-31 00:40:21.670 -04:00 [INF] Executing endpoint 'RestWithAspNet10_Scaffold.Controllers.BookController.Get (RestWithAspNet10-Scaffold)'
+2025-12-31 00:40:21.681 -04:00 [INF] Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int64) on controller RestWithAspNet10_Scaffold.Controllers.BookController (RestWithAspNet10-Scaffold).
+2025-12-31 00:40:21.696 -04:00 [INF] Fetching book with ID 19
+2025-12-31 00:40:21.802 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[id], [b].[author], [b].[launch_date], [b].[price], [b].[title]
+FROM [Books] AS [b]
+WHERE [b].[id] = @id
+2025-12-31 00:40:21.808 -04:00 [INF] Executing OkObjectResult, writing value of type 'RestWithAspNet10_Scaffold.DTOs.Book.BookResponseDTO'.
+2025-12-31 00:40:21.813 -04:00 [INF] Executed action RestWithAspNet10_Scaffold.Controllers.BookController.Get (RestWithAspNet10-Scaffold) in 127.1389ms
+2025-12-31 00:40:21.817 -04:00 [INF] Executed endpoint 'RestWithAspNet10_Scaffold.Controllers.BookController.Get (RestWithAspNet10-Scaffold)'
+2025-12-31 00:40:21.821 -04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7286/api/book/19 - 200 null application/json; charset=utf-8 159.3767ms

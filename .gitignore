@@ -1,0 +1,58 @@
+## ================================
+## Visual Studio / .NET
+## ================================
+
+# Pastas de build
+bin/
+obj/
+[Bb]uild/
+[Bb]uild[Ll]og.*
+
+# Arquivos do Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# Arquivos temporários
+*.tmp
+*.log
+*.bak
+*.cache
+*.ilk
+*.pdb
+*.tlog
+*.idb
+*.pch
+
+# Publicação
+publish/
+app.publish/
+
+# Testes
+TestResults/
+*.trx
+
+# ReSharper / Rider
+_ReSharper*/
+*.DotSettings.user
+
+# Visual Studio Code
+.vscode/
+
+# Arquivos de pacote
+*.nupkg
+*.snupkg
+packages/
+packages.lock.json
+
+# Node / Front-end (caso use)
+node_modules/
+dist/
+wwwroot/dist/
+
+# Azure / IIS
+*.Publish.xml
+*.azurePubxml
